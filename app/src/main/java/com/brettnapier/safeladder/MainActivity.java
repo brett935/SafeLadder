@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             float[] orientation = new float[3]; //final orientation values
             SensorManager.getOrientation(rotationMatrix, orientation); //actually gives us heading and pitch/roll
 
-            double pitchAngle = Math.round( Math.toDegrees( orientation[1] ) );
+            int pitchAngle = (int) Math.round( Math.toDegrees( orientation[1] ) );
 
             if( ( pitchAngle>=70 && pitchAngle<=75 ) || ( pitchAngle <= -70 && pitchAngle >= -75 ) ){
                 tvSafe.setText( "Safe angle" );
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
             //display results, orientation[0],orientation[1], orientation[2] are all in radians by default
            //tvHeading.setText( "Heading: " + Math.toDegrees( orientation[0] ) );
-            tvPitch.setText( "Pitch: " + Math.toDegrees( orientation[1] ) );
+            tvPitch.setText( "Angle: " + pitchAngle );
             //tvRoll.setText( "Roll: " + Math.toDegrees( orientation[2] ) );
         }
 
