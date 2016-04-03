@@ -1,3 +1,11 @@
+//
+//
+//Brett Napier
+//CSC309 at EKU
+//4-3-16
+//
+//
+
 package com.brettnapier.safeladder;
 
 import android.hardware.Sensor;
