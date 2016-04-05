@@ -84,7 +84,13 @@ public class MainActivity extends AppCompatActivity {
 
             //display results, orientation[0],orientation[1], orientation[2] are all in radians by default
            //tvHeading.setText( "Heading: " + Math.toDegrees( orientation[0] ) );
-            tvPitch.setText( "Angle: " + pitchAngle );
+
+            if(pitchAngle<0){
+                tvPitch.setText( "Angle: " + pitchAngle *-1 );
+            }
+            else{
+                tvPitch.setText( "Angle: " + pitchAngle );
+            }
             //tvRoll.setText( "Roll: " + Math.toDegrees( orientation[2] ) );
         }
 
